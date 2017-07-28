@@ -18,3 +18,7 @@ Route::get('/', function () {
 */
 
 Route::get('/', 'WelcomeController@index');
+
+// ユーザー管理
+Route::get('signup', 'Auth\AuthController@getRegister')->name('signup.get');
+Route::post('signup', 'Auth\AuthController@postRegister')->name('signup.post');
